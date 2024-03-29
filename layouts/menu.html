@@ -5,17 +5,18 @@
 </ul>
 
 <script>
-    // Função para adicionar a classe "active" ao link correspondente à página atual
-    function setActiveLink() {
-        var currentPage = window.location.pathname;
-        var links = document.querySelectorAll('#navbar .nav-item a');
+    // Obtém o URL atual da página
+    var currentUrl = window.location.pathname;
 
-        links.forEach(function(link) {
-            var href = link.getAttribute('href');
-            link.classList.toggle('active', href === currentPage || (href === "/" && currentPage === "/"));
-        });
-    }
+    // Obtém todos os links no menu
+    var menuLinks = document.querySelectorAll('#navbar .nav-link');
 
-    // Chamando a função ao carregar a página
-    window.addEventListener('DOMContentLoaded', setActiveLink);
+    // Itera sobre os links do menu
+    menuLinks.forEach(function(link) {
+        // Verifica se o URL do link corresponde ao URL atual da página
+        if (link.getAttribute('href') === currentUrl) {
+            // Adiciona a classe 'active' ao link da página atual
+            link.classList.add('active');
+        }
+    });
 </script>
