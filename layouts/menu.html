@@ -4,6 +4,41 @@
     <li class="nav-item"><a href="/contato.html" class="nav-link">Contato</a></li>
 </ul>
 
+<!-- Menu Mobile -->
+<div id="mobile-menu" class="mobile-menu">
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+    <ul id="mobile-navbar" class="mobile-navbar">
+        <li class="mobile-nav-item"><a href="/" class="mobile-nav-link" aria-current="page">Home</a></li>
+        <li class="mobile-nav-item"><a href="/sobre.html" class="mobile-nav-link">Sobre</a></li>
+        <li class="mobile-nav-item"><a href="/contato.html" class="mobile-nav-link">Contato</a></li>
+    </ul>
+</div>
+
+<script>
+        // JavaScript para alternar a visibilidade do menu mobile ao clicar no botão de alternância
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNavbar = document.getElementById('mobile-navbar');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileNavbar.style.display = mobileNavbar.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Obtém o URL atual da página
+    var currentUrl = window.location.pathname;
+
+    // Obtém todos os links no menu
+    var menuLinks = document.querySelectorAll('#mobile-menu .mobile-nav-link');
+
+    // Itera sobre os links do menu
+    menuLinks.forEach(function(link) {
+        // Verifica se o URL do link corresponde ao URL atual da página
+        if (link.getAttribute('href') === currentUrl) {
+            // Adiciona a classe 'active' ao link da página atual
+            link.classList.add('active');
+        }
+    });
+</script>
+
 <script>
     // Obtém o URL atual da página
     var currentUrl = window.location.pathname;
