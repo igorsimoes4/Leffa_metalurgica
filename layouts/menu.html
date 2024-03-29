@@ -11,7 +11,10 @@
         var links = document.querySelectorAll('.nav-item a');
 
         links.forEach(function(link) {
-            if (link.getAttribute('href') === currentPage) {
+            // Verifica se a URL do link corresponde à página atual
+            if (currentPage === "/" && link.getAttribute('href') === "/") {
+                link.classList.add('active');
+            } else if (link.getAttribute('href') === currentPage) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
