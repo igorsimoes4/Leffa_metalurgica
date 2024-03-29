@@ -1,0 +1,14 @@
+:root {    
+    --color-white: white;
+    --color-orange: #fd8f30;
+    --color-blue-dark: #173e69;
+}
+
+header, #menu a {
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+#menu a:hover, .active {
+    color: var(--color-orange) !important;
+}
