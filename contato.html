@@ -2,16 +2,26 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS stylesheets -->
     <link rel="stylesheet" href="Assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Link para Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" type="imagex/png" href="Assets/images/Logo.ico">
+
+    <!-- JavaScript scripts -->
     <script src="Assets/js/script.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic header and footer loading -->
     <script>
         $(function () {
             $("#header").load("/components/navbar/navbar.html");
@@ -19,12 +29,16 @@
             $("#contact").load("/components/form/contact.html");
         });
     </script>
+
+    <!-- Page title -->
     <title>Leffa Metalúrgica | Contato</title>
 </head>
 
 <body>
+    <!-- Header section -->
     <header id="header"></header>
 
+    <!-- Main content section -->
     <main class="container mb-5 pt-5">
         <h1 class="mt-5 text-center">Entre em Contato</h1>
         <div class="row">
@@ -35,6 +49,7 @@
         </div>
     </main>
 
+    <!-- Footer section -->
     <footer id="footer" class="footer"></footer>
 </body>
 
