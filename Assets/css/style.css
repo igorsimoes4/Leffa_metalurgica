@@ -1,18 +1,45 @@
-:root {    
+:root {
     --color-white: white;
     --color-orange: #fd8f30;
     --color-blue-dark: #173e69;
     --color-blue-dark-2: #164d88;
 }
 
-header, #navbar a {
+main {
+    min-height: 80vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header,
+#navbar a {
     background-color: var(--color-blue-dark);
     color: var(--color-white);
     text-transform: uppercase;
 }
-#menu a:hover, .active, #mobile-menu i:hover {
-    color: var(--color-orange) !important;    
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
+
+
+#menu a:hover,
+.active,
+#mobile-menu i:hover {
+    color: var(--color-orange) !important;
+}
+
 .active {
     border-bottom: #fd8f30 3px solid;
 }
@@ -61,8 +88,68 @@ header, #navbar a {
     background-color: var(--color-blue-dark-2);
 }
 
+.form-container {
+    width: 500px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-control {
+    background-color: var(--color-white);
+    border-color: #ccc;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--color-orange) !important;
+    box-shadow: 0 0 0 0.2rem rgba(253, 143, 48, 0.25) !important;
+}
+
+.form-floating label {
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn-primary-contact {
+    background-color: var(--color-orange) !important;
+    border-color: var(--color-orange) !important;
+    border-radius: 5px;
+}
+
+.btn-primary-contact:hover {
+    background-color: #fd7b20 !important;
+    border-color: #fd6910 !important;
+    box-shadow: 0 0 0 0.2rem rgba(253, 123, 32, 0.5) !important;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+}
+
 /* Estilos para Tela Pequena */
 @media only screen and (max-width: 770px) {
+    footer {
+        position: none;
+    }
+
+    footer .d-flex {
+        gap:  10px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
     #navbar {
         display: none;
     }
@@ -72,7 +159,8 @@ header, #navbar a {
     }
 
     .content {
-        padding-top: 60px; /* Ajuste para compensar o espaço ocupado pelo menu mobile */
+        padding-top: 60px;
+        /* Ajuste para compensar o espaço ocupado pelo menu mobile */
     }
 
     .mobile-navbar {

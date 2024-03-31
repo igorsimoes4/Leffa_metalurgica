@@ -1,0 +1,17 @@
+<div class="d-flex container pb-3 pt-3">
+    <div class="col-6">
+        <a href="/" class="d-flex align-items-center me-md-auto text-dark text-decoration-none">
+            <img src="/Assets/images/Logo_nav.png" alt="Leffa Metalúrgica" width="150px">
+        </a>
+    </div>
+    <div class="col-6">
+        <div class="text-center">
+            <p>Copyright © <span id="copyright-year"></span> Leffa Metalúrgica. </br> All rights reserved.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentYear = new Date().getFullYear();
+    document.getElementById("copyright-year").innerText = currentYear;
+</script>
