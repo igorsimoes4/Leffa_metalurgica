@@ -19,8 +19,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="imagex/png" href="Assets/images/Logo.ico">
 
-    
-
     <style>
         span {
             text-transform: uppercase;
@@ -33,8 +31,8 @@
 </head>
 
 <body>
-    
-    <div class="preloader" style="display: flex; flex-direction:column; gap: 15px;">
+
+    <div class="preloader" id="preloader" style="display: flex; flex-direction:column; gap: 15px;">
         <!-- Logo -->
         <img src="Assets/images/Logo_L.png" alt="Logo" class="preloader-logo">
         <!-- Spinner -->
@@ -45,7 +43,7 @@
     <header id="header"></header>
 
     <!-- Main content section -->
-    <main class="container mb-5 pt-5">
+    <main class="container content mb-5 pt-5">
         <h1 class="mt-5 text-center">Entre em Contato</h1>
         <div class="row">
             <div class="container mt-5 col-md-6 align-content-center">
@@ -63,14 +61,14 @@ Sáb - Dom - Fer: Fechado</pre>
 
     <!-- Footer section -->
     <footer id="footer" class="footer"></footer>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- JavaScript scripts -->
     <script src="Assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
 
     <!-- Dynamic header and footer loading -->
     <script>
@@ -78,10 +76,12 @@ Sáb - Dom - Fer: Fechado</pre>
             $("#header").load("/components/navbar/navbar.html");
             $("#footer").load("/components/footer/footer.html");
             $("#contact").load("/components/form/contact.html");
+        });
 
-            // Ocultar o preloader quando a página estiver completamente carregada
-            $(window).on('load', function () {
-                $('.preloader').delay(350).fadeOut('slow');
+        // Ocultar o preloader quando a página estiver completamente carregada
+        $(window).on('load', function () {
+            $('.preloader').fadeOut('slow', function () {
+                $('.container').fadeIn('slow');
             });
         });
     </script>

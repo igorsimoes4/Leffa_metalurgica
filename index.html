@@ -25,7 +25,7 @@
 
 <body>
 
-    <div class="preloader" style="display: flex; flex-direction:column; gap: 15px;">
+    <div class="preloader" id="preloader" style="display: flex; flex-direction:column; gap: 15px;">
         <!-- Logo -->
         <img src="Assets/images/Logo_L.png" alt="Logo" class="preloader-logo">
         <!-- Spinner -->
@@ -68,7 +68,9 @@
 
             // Ocultar o preloader quando a página estiver completamente carregada
             $(window).on('load', function () {
-                $('.preloader').delay(350).fadeOut('slow');
+                $('.preloader').fadeOut('slow', function () {
+                    $('.content').fadeIn('slow');
+                });
             });
         });
     </script>
