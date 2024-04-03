@@ -181,7 +181,7 @@ form textarea {
 
 .banner {
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-color: var(--color-blue-dark);
     opacity: 50;
     color: #fff;
