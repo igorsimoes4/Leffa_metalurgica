@@ -134,7 +134,8 @@ header {
     background-color: var(--color-blue-dark-2);
 }
 
-form input, form textarea {
+form input,
+form textarea {
     border: 0 !important;
     border-bottom: 2px solid #164d88 !important;
     border-radius: 0 !important;
@@ -165,13 +166,15 @@ form input, form textarea {
     font-size: 1rem;
 }
 
-.btn-primary-contact, .btn-orcamento {
+.btn-primary-contact,
+.btn-orcamento {
     background-color: var(--color-orange) !important;
     border-color: var(--color-orange) !important;
     border-radius: 5px;
 }
 
-.btn-primary-contact:hover, .btn-orcamento:hover {
+.btn-primary-contact:hover,
+.btn-orcamento:hover {
     background-color: #fd7b20 !important;
     border-color: #fd6910 !important;
 }
@@ -232,7 +235,9 @@ form input, form textarea {
     z-index: 0;
 }
 
-.fa-phone, .fa-map, .fa-clock {
+.fa-phone,
+.fa-map,
+.fa-clock {
     color: var(--color-orange);
 }
 
@@ -245,6 +250,45 @@ form input, form textarea {
     background-color: var(--color-blue-dark);
     color: var(--color-white);
 }
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader-logo {
+    width: 100px; /* Defina a largura desejada para o seu logo */
+    height: auto; /* Mantenha a altura proporcional à largura */
+    /* Adicione mais estilos conforme necessário */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Estilos para Tela Pequena */
 @media only screen and (max-width: 770px) {
