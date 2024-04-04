@@ -265,9 +265,8 @@ form textarea {
 }
 
 .preloader-logo {
-    width: 100px; /* Defina a largura desejada para o seu logo */
+    width: 150px; /* Defina a largura desejada para o seu logo */
     height: auto; /* Mantenha a altura proporcional à largura */
-    /* Adicione mais estilos conforme necessário */
 }
 
 .spinner {
