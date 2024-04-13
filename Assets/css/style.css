@@ -241,6 +241,19 @@ form textarea {
     color: var(--color-orange);
 }
 
+.qualidade p, .qualidade li {
+    text-align: justify;
+}
+
+.services p {
+    text-align: justify !important;
+}
+
+.missao {
+    background-color: var(--color-orange);
+    color: var(--color-blue-dark);
+}
+
 .footer {
     width: 100%;
     text-align: center;

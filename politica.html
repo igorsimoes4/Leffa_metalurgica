@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="imagex/png" href="Assets/images/Logo.ico">
+
+    <!-- Page title -->
+    <title>Leffa Metalúrgica | Política</title>
+
+
+</head>
+
+<body>
+
+    <div class="preloader" id="preloader" style="display: flex; flex-direction:column; gap: 15px;">
+        <!-- Logo -->
+        <img src="Assets/images/logo_sem_fundo_preloader.webp" alt="Logo" class="preloader-logo">
+        <!-- Spinner -->
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header section -->
+    <header id="header"></header>
+
+    <!-- Main content section -->
+    <main class="container qualidade content mb-5 pt-5" style="padding-top: 60px;">
+        <div
+            style="background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-top: 90px !important; padding: 20px;">
+            <h1 class="mt-2 text-center">Políticas de Qualidade</h1>
+            <p>Na Leffa Metalúrgica estamos comprometidos em fornecer produtos e serviços de alta qualidade que atendam
+                e excedam as expectativas de nossos clientes da indústria metalúrgica. Nossa política de qualidade é
+                baseada nos seguintes princípios:</p>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <strong>Excelência Operacional:</strong>
+                    <p> Buscamos continuamente aprimorar nossos processos de
+                        fabricação, investindo em tecnologia de ponta, treinamento de equipe e otimização de
+                        procedimentos
+                        para garantir a excelência operacional em todas as etapas.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <strong>Satisfação do Cliente:</strong>
+                    <p> Colocamos nossos clientes no centro de tudo o que fazemos.
+                        Comprometemo-nos a compreender suas necessidades, fornecer soluções personalizadas e entregar
+                        produtos e serviços que superem suas expectativas em termos de qualidade, prazo e custo.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <strong>Padrões de Qualidade:</strong>
+                    <p>
+                        Mantemos padrões rigorosos de qualidade em todas as fases do
+                        processo, desde o recebimento da matéria-prima até a entrega do produto final. Nossa equipe está
+                        empenhada em garantir a conformidade com as especificações técnicas, normas e regulamentações
+                        aplicáveis.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <strong>Melhoria Contínua:</strong>
+                    <p> Promovemos uma cultura de melhoria contínua, incentivando a
+                        participação ativa de nossa equipe na identificação de oportunidades de aprimoramento,
+                        implementação
+                        de melhores práticas e monitoramento dos resultados para garantir a eficácia de nossos
+                        processos.
+                    </p>
+                </li>
+                <li  class="list-group-item">
+                    <strong>Responsabilidade Ambiental e Segurança:</strong>
+                    <p> Comprometemo-nos a operar de forma
+                        ambientalmente responsável, minimizando o impacto de nossas atividades no meio ambiente e
+                        promovendo
+                        a segurança e o bem-estar de nossos colaboradores em todas as operações.
+                    </p>
+                </li>
+                <li  class="list-group-item">
+                    <strong>Parcerias Estratégicas:</strong>
+                    <p> Valorizamos nossas parcerias com fornecedores e Clientes,
+                        trabalhando em conjunto para garantir a qualidade e a confiabilidade de nossos produtos e
+                        serviços
+                        ao longo do tempo.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer id="footer" class="footer"></footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript scripts -->
+    <script src="Assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Dynamic header and footer loading -->
+    <script>
+        $(function () {
+            $("#header").load("/components/navbar/navbar.html");
+            $("#footer").load("/components/footer/footer.html");
+        });
+
+        // Ocultar o preloader quando a página estiver completamente carregada
+        $(window).on('load', function () {
+            $('.preloader').fadeOut('slow', function () {
+                $('.container').fadeIn('slow');
+            });
+        });
+    </script>
+</body>
+
+</html>
