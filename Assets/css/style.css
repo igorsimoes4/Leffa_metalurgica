@@ -3,6 +3,50 @@
     --color-orange: #fd8f30;
     --color-blue-dark: #173e69;
     --color-blue-dark-2: #164d88;
+    --color-black-light: #232323;
+    --color-black: black;
+    --color-gray: #787878;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Estilo do rastreador (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-orange);
+    border-radius: 6px;
+}
+
+/* Estilo do rastreador (thumb) ao ser arrastado */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-blue-dark);
+}
+
+/* Estilo da pista (track) */
+::-webkit-scrollbar-track {
+    background-color: var(--color-blue-dark-2);
+    border-radius: 6px;
+}
+
+/* Estilo da barra de rolagem para navegadores baseados em Gecko (Firefox) */
+html {
+    scrollbar-color: var(--color-orange) var(--color-blue-dark-2);
+    scrollbar-width: thin;
+}
+
+/* Estilo da barra de rolagem para navegadores baseados em Trident (Internet Explorer) */
+* {
+    scrollbar-base-color: var(--color-blue-dark-2);
+    scrollbar-arrow-color: var(--color-blue-dark-2);
+    scrollbar-DarkShadow-Color: var(--color-blue-dark-2);
+    scrollbar-Track-Color: var(--color-blue-dark-2);
+    scrollbar-Face-Color: var(--color-orange);
+    scrollbar-Highlight-Color: var(--color-orange);
+    scrollbar-3dlight-Color: var(--color-orange);
+    scrollbar-Shadow-Color: var(--color-orange);
+    scrollbar-DarkShadow-Color: var(--color-orange);
 }
 
 main {
@@ -16,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header,
@@ -30,7 +75,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -88,6 +134,13 @@ header {
     background-color: var(--color-blue-dark-2);
 }
 
+form input,
+form textarea {
+    border: 0 !important;
+    border-bottom: 2px solid #164d88 !important;
+    border-radius: 0 !important;
+}
+
 .form-container {
     width: 500px;
     background-color: var(--color-white);
@@ -99,13 +152,12 @@ header {
 .form-control {
     background-color: var(--color-white);
     border-color: #ccc;
-    border-radius: 5px;
     box-shadow: none;
 }
 
 .form-control:focus {
-    border-color: var(--color-orange) !important;
-    box-shadow: 0 0 0 0.2rem rgba(253, 143, 48, 0.25) !important;
+    border-bottom: 2px solid var(--color-orange) !important;
+    box-shadow: 0 0 0 0 !important;
 }
 
 .form-floating label {
@@ -114,16 +166,79 @@ header {
     font-size: 1rem;
 }
 
-.btn-primary-contact {
+.btn-primary-contact,
+.btn-orcamento {
     background-color: var(--color-orange) !important;
     border-color: var(--color-orange) !important;
     border-radius: 5px;
 }
 
-.btn-primary-contact:hover {
+.btn-primary-contact:hover,
+.btn-orcamento:hover {
     background-color: #fd7b20 !important;
     border-color: #fd6910 !important;
-    box-shadow: 0 0 0 0.2rem rgba(253, 123, 32, 0.5) !important;
+}
+
+.banner {
+    background-size: cover;
+    background-position: bottom;
+    background-color: var(--color-blue-dark);
+    opacity: 50;
+    color: #fff;
+    padding: 0 20px 0px 20px;
+    text-align: center;
+    align-content: center;
+    position: relative;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 77, 136, 0.6);
+    z-index: 1;
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.banner-content .btn-primary {
+    font-size: 24px;
+    padding: 12px 30px;
+}
+
+.banner:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.fa-phone,
+.fa-map,
+.fa-clock {
+    color: var(--color-orange);
 }
 
 .footer {
@@ -136,14 +251,53 @@ header {
     color: var(--color-white);
 }
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader-logo {
+    width: 150px; /* Defina a largura desejada para o seu logo */
+    height: auto; /* Mantenha a altura proporcional à largura */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--color-orange);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 /* Estilos para Tela Pequena */
 @media only screen and (max-width: 770px) {
     footer {
         position: none;
     }
 
+
     footer .d-flex {
-        gap:  10px;
+        gap: 10px;
         flex-direction: column;
         align-content: center;
         justify-content: center;
