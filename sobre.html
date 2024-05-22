@@ -40,19 +40,23 @@
 
     <!-- Main content section -->
     <main class="container content mb-5 pt-5" style="padding-top: 60px;">
-        <div style="background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-top: 90px !important; padding: 20px;">
+        <div
+            style="background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-top: 90px !important; padding: 20px;">
             <h1 class="mt-2 text-center">Quem Somos</h1>
-            <p style="text-align: justify;">A Leffa Metalúrgica foi fundada em 13 de março de 2024 por 3 irmãos, cada um com
+            <p style="text-align: justify;">A Leffa Metalúrgica foi fundada em 13 de março de 2024 por 3 irmãos, cada um
+                com
                 experiências
                 profissionais distintas: Comercial, Financeira/contábil e programador/engenheiro na área metalúrgica.
                 Com o
                 sonho de ser empreendedor e ter sua marca reconhecida no Sul e Sudeste do estado, a Leffa busca criar um
                 padrão de serviços qualificados atendendo a demanda dos nossos clientes com garantia de produção.</p>
             <h2 class="mt-5 text-center">Missão</h2>
-            <p style="text-align: justify;">Prestar serviços de qualidade por meio de máquinas com alto desempenho tecnológico de forma sustentável.
+            <p style="text-align: justify;">Prestar serviços de qualidade por meio de máquinas com alto desempenho
+                tecnológico de forma sustentável.
             </p>
             <h2 class="mt-5 text-center">Visão</h2>
-            <p style="text-align: justify;">Ser reconhecida do mercado metalúrgico pelo comprometimento de entrega, qualidade e relacionamento.</p>
+            <p style="text-align: justify;">Ser reconhecida do mercado metalúrgico pelo comprometimento de entrega,
+                qualidade e relacionamento.</p>
         </div>
     </main>
 
@@ -68,19 +72,8 @@
     </script>
 
     <!-- Dynamic header and footer loading -->
-    <script>
-        $(function () {
-            $("#header").load("/components/navbar/navbar.html");
-            $("#footer").load("/components/footer/footer.html");
-        });
-
-        // Ocultar o preloader quando a página estiver completamente carregada
-        $(window).on('load', function () {
-            $('.preloader').fadeOut('slow', function () {
-                $('.container').fadeIn('slow');
-            });
-        });
-    </script>
+    <script src="/Assets/js/Header_Footer.js"></script>
+    <script src="Assets/js/preload.js"></script>
 </body>
 
 </html>

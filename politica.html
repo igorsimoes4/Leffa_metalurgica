@@ -80,7 +80,7 @@
                         processos.
                     </p>
                 </li>
-                <li  class="list-group-item">
+                <li class="list-group-item">
                     <strong>Responsabilidade Ambiental e Segurança:</strong>
                     <p> Comprometemo-nos a operar de forma
                         ambientalmente responsável, minimizando o impacto de nossas atividades no meio ambiente e
@@ -88,7 +88,7 @@
                         a segurança e o bem-estar de nossos colaboradores em todas as operações.
                     </p>
                 </li>
-                <li  class="list-group-item">
+                <li class="list-group-item">
                     <strong>Parcerias Estratégicas:</strong>
                     <p> Valorizamos nossas parcerias com fornecedores e Clientes,
                         trabalhando em conjunto para garantir a qualidade e a confiabilidade de nossos produtos e
@@ -112,19 +112,8 @@
     </script>
 
     <!-- Dynamic header and footer loading -->
-    <script>
-        $(function () {
-            $("#header").load("/components/navbar/navbar.html");
-            $("#footer").load("/components/footer/footer.html");
-        });
-
-        // Ocultar o preloader quando a página estiver completamente carregada
-        $(window).on('load', function () {
-            $('.preloader').fadeOut('slow', function () {
-                $('.container').fadeIn('slow');
-            });
-        });
-    </script>
+    <script src="/Assets/js/Header_Footer.js"></script>
+    <script src="Assets/js/preload.js"></script>
 </body>
 
 </html>

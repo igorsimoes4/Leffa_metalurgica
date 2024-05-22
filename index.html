@@ -69,18 +69,11 @@
     <!-- Dynamic header and footer loading -->
     <script>
         $(function () {
-            $("#header").load("/components/navbar/navbar.html");
-            $("#services").load("/components/services/service.html");
-            $("#footer").load("/components/footer/footer.html");
-
-            // Ocultar o preloader quando a página estiver completamente carregada
-            $(window).on('load', function () {
-                $('.preloader').fadeOut('slow', function () {
-                    $('.content').fadeIn('slow');
-                });
-            });
+            $("#services").load("/components/services/service.html");           
         });
     </script>
+    <script src="/Assets/js/Header_Footer.js"></script>
+    <script src="Assets/js/preload.js"></script>
 
 </body>
 
