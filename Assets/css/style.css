@@ -254,6 +254,14 @@ form textarea {
     color: var(--color-blue-dark);
 }
 
+.card-body a:hover {
+    color: var(--color-white);
+}
+
+.explicacao {
+    flex-direction: row;
+}
+
 .footer {
     width: 100%;
     text-align: center;
@@ -306,6 +314,10 @@ form textarea {
 @media only screen and (max-width: 770px) {
     footer {
         position: none;
+    }
+
+    .explicacao {
+        flex-direction: column;
     }
 
 
