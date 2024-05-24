@@ -241,7 +241,8 @@ form textarea {
     color: var(--color-orange);
 }
 
-.qualidade p, .qualidade li {
+.qualidade p,
+.qualidade li {
     text-align: justify;
 }
 
@@ -272,6 +273,42 @@ form textarea {
     color: var(--color-white);
 }
 
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: s6 1s infinite linear;
+}
+
+.custom-loader::before,
+.custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.custom-loader::before {
+    border-color: #FD8F30 #0000;
+    animation: inherit;
+    animation-duration: .5s;
+    animation-direction: reverse;
+}
+
+.custom-loader::after {
+    margin: 8px;
+}
+
+@keyframes s6 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
 .preloader {
     position: fixed;
     top: 0;
@@ -286,27 +323,10 @@ form textarea {
 }
 
 .preloader-logo {
-    width: 150px; /* Defina a largura desejada para o seu logo */
-    height: auto; /* Mantenha a altura proporcional à largura */
-}
-
-.spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: var(--color-orange);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    width: 150px;
+    /* Defina a largura desejada para o seu logo */
+    height: auto;
+    /* Mantenha a altura proporcional à largura */
 }
 
 
